@@ -21,7 +21,7 @@ const Slide1 = () => {
           </button>
         </div>
         <hr className="h-1 bg-slate-800" />
-        <div>
+        <div className="flex flex-col items-center justify-between py-24">
           <img
             src={`${router.basePath}/assets/images/ing_placeholder.svg`}
             alt="Ingredients Place Holder Image"
@@ -29,7 +29,7 @@ const Slide1 = () => {
 
           <div>
             {' '}
-            <p>
+            <p className="text-center">
               Your ingredients will <br></br> appear here.
             </p>
           </div>
