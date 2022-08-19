@@ -1,11 +1,10 @@
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
 const Index = () => {
   // eslint-disable-next-line unused-imports/no-unused-vars
-  const router = useRouter();
 
   return (
     <Main
@@ -16,9 +15,9 @@ const Index = () => {
         />
       }
     >
-      <h1 className="text-2xl font-bold">Header placeholder</h1>
-      <p>I like food</p>
-      <a href={`${router.basePath}`}> test link</a>
+      <Link href="/demo/">
+        <a>Link to Demo</a>
+      </Link>
     </Main>
   );
 };

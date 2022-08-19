@@ -19,3 +19,31 @@ a:hover {
 .content ul {
   @apply my-6;
 }
+
+.app h1 {
+  @apply text-3xl;
+  @apply font-bold;
+}
+
+.app h2 {
+  @apply text-2xl;
+  @apply font-bold;
+}
+
+.app h3 {
+  @apply text-xl;
+  @apply font-bold;
+}
+
+.app h4 {
+  @apply text-lg;
+  @apply font-bold;
+}
+
+.app button.primary {
+  @apply bg-slate-400;
+}
+
+.app button.secondary {
+  @apply bg-slate-300;
+}
