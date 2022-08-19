@@ -34,7 +34,8 @@ const Slide1 = () => {
           </div>
         </div>
         <div>
-          <button className="border-2 border-solid border-stone-800">
+          {/* disable button because there are no ingredients */}
+          <button className="border-2 border-solid border-stone-800" disabled>
             {'Find Recipes'}
           </button>
         </div>
