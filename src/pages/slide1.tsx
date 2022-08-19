@@ -14,6 +14,7 @@ const Slide1 = () => {
           <input
             type="text"
             className="border-2 border-solid border-stone-800"
+            placeholder="Search ingredients"
           />
           <button className="border-2 border-solid border-stone-800">
             Add
