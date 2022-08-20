@@ -1,15 +1,20 @@
-const Component = () => {
+import React from 'react';
+
+import ComboBox from '@/components/cookingApp/comboBox';
+
+type Props = {
+  selectedItems: string[];
+  setSelectedItems: React.Dispatch<React.SetStateAction<string[]>>;
+};
+const Component = (props: Props) => {
+  const { selectedItems, setSelectedItems } = props;
   return (
     <div className="flex flex-wrap p-4">
       <h2 className="w-full">What&apos;s in your kitchen?</h2>
-      <input
-        type="text"
-        className="grow border-2 border-solid border-stone-800 p-2"
-        placeholder="Search ingredients"
-      />
-      <button className="secondary -ml-0.5 border-2 border-solid border-stone-800 p-2 py-1 text-xl font-bold">
-        Add
-      </button>
+      <ComboBox
+        selectedItems={selectedItems}
+        setSelectedItems={setSelectedItems}
+      ></ComboBox>
     </div>
   );
 };

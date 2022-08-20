@@ -1,3 +1,5 @@
+import React from 'react';
+
 import FindRecipe from '@/components/cookingApp/findRecipe';
 import Header from '@/components/cookingApp/header';
 import Display from '@/components/cookingApp/ingrDisplay';
@@ -6,6 +8,7 @@ import { Meta } from '@/layouts/Meta';
 import { CookingApp } from '@/templates/CookingApp';
 
 const Screen = () => {
+  const [selectedItems, setSelectedItems] = React.useState<string[]>([]);
   return (
     <CookingApp
       meta={
@@ -16,10 +19,20 @@ const Screen = () => {
       }
     >
       <Header></Header>
-      <Search></Search>
+      <Search
+        selectedItems={selectedItems}
+        setSelectedItems={setSelectedItems}
+      ></Search>
       <hr className="h-0.5 bg-slate-800" />
-      <Display className="grow"></Display>
-      <FindRecipe></FindRecipe>
+      <Display
+        className="grow p-4"
+        selectedItems={selectedItems}
+        setSelectedItems={setSelectedItems}
+      ></Display>
+      <FindRecipe
+        selectedItems={selectedItems}
+        setSelectedItems={setSelectedItems}
+      ></FindRecipe>
     </CookingApp>
   );
 };
