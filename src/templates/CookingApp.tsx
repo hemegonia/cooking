@@ -8,7 +8,7 @@ type Props = {
 const CookingApp = (props: Props) => (
   <div>
     {props.meta}
-    <div className="app flex h-screen w-screen flex-col bg-white">
+    <div className="app fixed flex h-full w-full flex-col bg-white">
       {props.children}
     </div>
   </div>
