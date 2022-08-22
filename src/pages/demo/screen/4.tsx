@@ -1,11 +1,32 @@
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Meta } from '@/layouts/Meta';
 import { CookingApp } from '@/templates/CookingApp';
 
 const Screen = () => {
   const router = useRouter();
+  const [timer, setTimer] = useState(3);
+  const [isFirstRender, setFirstRender] = useState(true);
+  useEffect(() => {
+    console.log('this');
+    if (isFirstRender) {
+      setFirstRender(false);
+      return;
+    }
+    if (!isFirstRender) {
+      setTimeout(() => {
+        console.log('timer triggered');
+
+        setTimer((timerr) => {
+          if (timerr <= 0) {
+            router.push('/demo/screen/5');
+          }
+          return timerr - 1;
+        });
+      }, 1000);
+    }
+  }, [timer, isFirstRender]);
   return (
     <CookingApp
       meta={
@@ -24,10 +45,12 @@ const Screen = () => {
         />
 
         <div>
-          {' '}
           <h4 className="text-center">
             while we cook up some <br></br>recipes for you!
           </h4>
+          <p className="absolute right-0 bottom-0 text-slate-500 ">
+            Redirect in {timer} seconds
+          </p>
         </div>
       </div>
     </CookingApp>
