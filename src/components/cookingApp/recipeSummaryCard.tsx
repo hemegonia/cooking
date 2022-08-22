@@ -1,6 +1,17 @@
-const Component = () => {
+import { useRouter } from 'next/router';
+
+type Props = {
+  onClick?: () => void;
+};
+const Component = (_props: Props) => {
+  const router = useRouter();
   return (
-    <div className="flex gap-4 rounded-sm p-4 shadow-lg">
+    <div
+      className="flex cursor-pointer gap-4 rounded-sm p-4 shadow-lg"
+      onClick={() => {
+        router.push('/demo/screen/6a');
+      }}
+    >
       <div
         style={{ height: '120px', width: '120px' }}
         className="flex shrink-0 items-center justify-center rounded-xl bg-slate-200"
