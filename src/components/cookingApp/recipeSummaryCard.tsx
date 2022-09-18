@@ -7,7 +7,7 @@ const Component = (_props: Props) => {
   const router = useRouter();
   return (
     <div
-      className="flex cursor-pointer gap-4 rounded-sm p-4 shadow-lg"
+      className="flex cursor-pointer gap-4 border-2 border-black p-4 shadow-sm"
       onClick={() => {
         router.push('/demo/screen/6a');
       }}

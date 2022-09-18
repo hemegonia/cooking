@@ -13,7 +13,7 @@ const Component = (props: Props) => {
   return (
     <div className={`${props.className} flex flex-col`}>
       <div className={`flex justify-between`}>
-        <h1> {recipes.length} Recipes Found</h1>
+        <p className="font-bold"> {recipes.length} Recipes Found</p>
         <button
           className="flex items-center"
           onClick={() => {
@@ -29,7 +29,9 @@ const Component = (props: Props) => {
       </div>
       <div className={`flex justify-between`}>
         <h1> Ready to Make</h1>
-        <button className="flex items-center">View All</button>
+        <button className="flex items-center border-2 border-black bg-tertiary px-4 font-bold shadow-sm">
+          View All
+        </button>
       </div>
       <RecipeCarousel></RecipeCarousel>
       <div className={`flex justify-between`}>
