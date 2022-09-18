@@ -12,7 +12,7 @@ const Component = (props: Props) => {
   return selectedItems.length > 0 ? (
     <div className={`${props.className}`}>
       <div className={`flex justify-between`}>
-        <h1> Ingredients ({selectedItems.length})</h1>
+        <h1> My Ingredients ({selectedItems.length})</h1>
         <button
           className="flex items-center"
           onClick={() => {
@@ -53,7 +53,7 @@ const Component = (props: Props) => {
     </div>
   ) : (
     <div
-      className={`flex flex-col items-center justify-center ${props.className}`}
+      className={`m-5 box-border flex flex-col items-center justify-center border-2 border-black shadow-sm ${props.className}`}
     >
       <div className={`flex flex-col items-center`}>
         <img

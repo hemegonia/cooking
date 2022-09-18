@@ -16,6 +16,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        primary: '#6C4FFF',
+        secondary: '#F531B3',
+        tertiary: '#FFEB00',
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',
@@ -38,6 +41,9 @@ module.exports = {
           800: '#2c5282',
           900: '#2a4365',
         },
+      },
+      boxShadow: {
+        sm: '4px 4px 0 0',
       },
     },
   },
