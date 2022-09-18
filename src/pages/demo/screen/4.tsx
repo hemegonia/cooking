@@ -9,15 +9,12 @@ const Screen = () => {
   const [timer, setTimer] = useState(3);
   const [isFirstRender, setFirstRender] = useState(true);
   useEffect(() => {
-    console.log('this');
     if (isFirstRender) {
       setFirstRender(false);
       return;
     }
     if (!isFirstRender) {
       setTimeout(() => {
-        console.log('timer triggered');
-
         setTimer((timerr) => {
           if (timerr <= 0) {
             router.push('/demo/screen/5');
@@ -37,7 +34,7 @@ const Screen = () => {
       }
     >
       <div className="flex h-full flex-col items-center justify-center">
-        <h4 className="text-center">One moment</h4>
+        <h4 className="text-center">One moment please</h4>
         <img
           style={{ height: '248px', width: '248px' }}
           src={`${router.basePath}/assets/images/pot_animation.gif`}

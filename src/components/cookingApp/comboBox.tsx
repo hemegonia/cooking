@@ -102,7 +102,7 @@ function MultipleComboBoxExample(props: Props) {
     return (
       <div className="w-full">
         <div className="flex flex-col gap-1">
-          <div className="inline-flex flex-wrap items-center gap-2 bg-white p-1.5 shadow-sm">
+          <div className="inline-flex flex-wrap items-center gap-2 bg-white p-1.5">
             {/* {selectedItems.map(function renderSelectedItem(
               selectedItemForRender,
               index
@@ -129,16 +129,19 @@ function MultipleComboBoxExample(props: Props) {
                 </span>
               );
             })} */}
-            <div className="flex grow gap-0.5" {...getComboboxProps()}>
+            <div
+              className="relative flex grow gap-0.5 shadow-sm"
+              {...getComboboxProps()}
+            >
               <input
                 placeholder="Search ingredients"
-                className="grow border-2 border-solid border-stone-800 p-2"
+                className="grow border-2 border-solid border-stone-800 p-2 outline-none"
                 {...getInputProps(
                   getDropdownProps({ preventKeyAction: isOpen })
                 )}
               />
               <button
-                className="secondary -ml-0.5 border-2 border-solid border-stone-800 p-2 py-1 text-xl font-bold"
+                className="absolute top-0 right-0 h-full border-2 border-black bg-secondary px-2 text-xl font-bold text-white"
                 onClick={() => {
                   setSelectedItems((selectedItemss) => {
                     return [...selectedItemss, inputValue];
@@ -152,7 +155,7 @@ function MultipleComboBoxExample(props: Props) {
         </div>
         <ul
           {...getMenuProps()}
-          className="absolute max-h-80 overflow-auto bg-white p-0 shadow-md"
+          className="absolute max-h-80 overflow-auto bg-white p-0"
         >
           {isOpen &&
             items.map((item, index) => (
@@ -160,7 +163,7 @@ function MultipleComboBoxExample(props: Props) {
                 className={`${
                   (highlightedIndex === index ? 'bg-blue-300 ' : '') +
                   (selectedItem === item ? 'font-bold ' : '')
-                }flex flex-col py-2 px-3 shadow-sm`}
+                }flex flex-col py-2 px-3`}
                 key={`${item}${index}`}
                 {...getItemProps({ item, index })}
               >

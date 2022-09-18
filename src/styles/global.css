@@ -39,11 +39,3 @@ a:hover {
   @apply text-lg;
   @apply font-bold;
 }
-
-.app button.primary {
-  @apply bg-slate-400;
-}
-
-.app button.secondary {
-  @apply bg-slate-300;
-}

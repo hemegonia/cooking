@@ -10,7 +10,7 @@ const Component = (props: Props) => {
   const { selectedItems, setSelectedItems } = props;
   return (
     <div className="flex flex-wrap p-4">
-      <h2 className="w-full">What&apos;s in your kitchen?</h2>
+      <h2 className="w-full">What&apos;s cooking, good-looking?</h2>
       <ComboBox
         selectedItems={selectedItems}
         setSelectedItems={setSelectedItems}
