@@ -4,7 +4,7 @@ import React from 'react';
 const Component = () => {
   const router = useRouter();
   return (
-    <div className="flex-col p-5">
+    <div className="mx-5 mt-5 flex-col">
       <div
         style={{ height: '240px', width: '100%' }}
         className="relative flex items-center justify-center rounded-xl bg-slate-200"
