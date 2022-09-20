@@ -1,4 +1,6 @@
 import Header from '@/components/cookingApp/header';
+import IngrAndRecipeToggle from '@/components/cookingApp/ingrAndRecipeToggle';
+import IngrList from '@/components/cookingApp/ingrList';
 import RecipesImgAndTitle from '@/components/cookingApp/recipeImgAndTitle';
 import RecipeStats from '@/components/cookingApp/recipeStats';
 import { Meta } from '@/layouts/Meta';
@@ -17,6 +19,8 @@ const Screen = () => {
       <Header></Header>
       <RecipesImgAndTitle></RecipesImgAndTitle>
       <RecipeStats></RecipeStats>
+      <IngrAndRecipeToggle></IngrAndRecipeToggle>
+      <IngrList></IngrList>
     </CookingApp>
   );
 };
